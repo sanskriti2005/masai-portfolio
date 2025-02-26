@@ -2,6 +2,21 @@ import React from "react";
 import { Link, Flex, Box, Image, Button } from "@chakra-ui/react";
 
 const Navbar = () => {
+  const handleResumeClick = () => {
+    const viewLink = "https://drive.google.com/file/d/1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P/view?usp=drive_link"; // Replace with your direct Drive link
+    const downloadLink = "https://drive.google.com/uc?export=download&id=1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P"; // Replace with your direct download link
+    
+    // Open resume in a new tab
+    window.open(viewLink, "_blank");
+
+    // Trigger download
+    const a = document.createElement("a");
+    a.href = downloadLink;
+    a.download = "Resume.pdf"; // Change filename if needed
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
   return (
     <div>
       <Flex position={"fixed"} width={"100%"} height={"50px"} top={0} left={0}>
@@ -12,7 +27,7 @@ const Navbar = () => {
           backdropFilter={"auto"}
           backdropBlur={"10px"}
           justify={"space-between"}
-          alignItems={'center'}
+          alignItems={"center"}
           padding={3}
         >
           <Flex gap={4}>
@@ -30,7 +45,7 @@ const Navbar = () => {
             </Link>
           </Flex>
           <Box>
-            <Button>Resume</Button>
+            <Button onClick={handleResumeClick}>Resume</Button>
           </Box>
         </Flex>
       </Flex>
