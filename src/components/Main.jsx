@@ -41,7 +41,7 @@ const Content = () => {
   return (
     <VStack width={"inherit"} height={'100%'} margin={"auto"} >
       {/* Home and About Me Section*/}
-      <Box width={"100%"}>
+      <Box width={"100%"} id="home">
         <Flex
           padding={5}
           gap={5}
@@ -90,7 +90,7 @@ const Content = () => {
       
 
       {/* Experience Section */}
-      <Box width={"100%"} padding={5}>
+      <Box width={"100%"} padding={5} id="experience">
         <Heading fontSize={30}>Experience</Heading>
         <AccordionRoot collapsible defaultValue={["devrhylme"]}>
           {experience.map((item, index) => (
@@ -111,7 +111,7 @@ const Content = () => {
 
       {/* Contacts */}
 
-      <Box width={"100%"} padding={5}>
+      <Box width={"100%"} padding={5} id="contact">
         <VStack align={"left"}>
           <Heading fontSize={30}>Contacts</Heading>
           <Flex justifyContent={"space-between"} marginBottom={5}>

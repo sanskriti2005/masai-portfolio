@@ -11,6 +11,7 @@ const App = () => {
   const flickerAnimation = `${flicker} 20s infinite linear`;
   return (
     <Container>
+      <Navbar/>
       <Container className="dark" width={400} fluid margin={"100px auto"}>
         <Content />
       </Container>
