@@ -1,24 +1,24 @@
-import React from 'react'
+import React from "react";
 import profile from "../assets/profile.jpg";
 import evershade from "../assets/evershade.png";
 import anzone from "../assets/anzone.png";
 import ollama from "../assets/ollama.png";
 import {
-    Box,
-    Container,
-    Heading,
-    HStack,
-    Image,
-    VStack,
-    Text,
-    Flex,
-    Link,
-  } from "@chakra-ui/react";
+  Box,
+  Container,
+  Heading,
+  HStack,
+  Image,
+  VStack,
+  Text,
+  Flex,
+  Link,
+} from "@chakra-ui/react";
 
 const Projects = () => {
   return (
     <div>
-        <Box align={"left"} width={"100%"} padding={5}>
+      <Box align={"left"} width={"100%"} padding={5}>
         <Heading fontSize={30} marginBottom={5}>
           Projects
         </Heading>
@@ -27,14 +27,35 @@ const Projects = () => {
           justifyContent={"space-between"}
           marginBottom={5}
         >
-          <Box color={"gray.500"} fontWeight={"bold"} fontSize={{ base: "16px", md: "20px"}}>
+          <Box
+            color={"gray.500"}
+            fontWeight={"bold"}
+            fontSize={{ base: "16px", md: "20px" }}
+          >
             Dec 2024
           </Box>
-          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px" }} gap={2} align={"left"}>
+          <VStack
+            width={"70%"}
+            fontSize={{ base: "16px", md: "20px" }}
+            gap={2}
+            align={"left"}
+          >
             <Image
               src={evershade}
-              height={100}
-              width={200}
+              width={{
+                base: "200px",
+                sm: "250px",
+                md: "300px",
+                lg: "400px",
+                "2xl": "500px",
+              }}
+              height={{
+                base: "100px",
+                sm: "125px",
+                md: "150px",
+                lg: "200px",
+                "2xl": "250px",
+              }}
               borderRadius={"5px"}
             />
             <Heading>EverShade</Heading>
@@ -72,14 +93,35 @@ const Projects = () => {
           justifyContent={"space-between"}
           marginBottom={5}
         >
-          <Box color={"gray.500"} fontWeight={"bold"} fontSize={{ base: "16px", md: "20px"}}>
+          <Box
+            color={"gray.500"}
+            fontWeight={"bold"}
+            fontSize={{ base: "16px", md: "20px" }}
+          >
             Sep 2024
           </Box>
-          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px"}} gap={2} align={"left"}>
+          <VStack
+            width={"70%"}
+            fontSize={{ base: "16px", md: "20px" }}
+            gap={2}
+            align={"left"}
+          >
             <Image
               src={anzone}
-              height={"50px"}
-              width={"50px"}
+              width={{
+                base: "60px",
+                sm: "80px",
+                md: "100px",
+                lg: "120px",
+                "2xl": "150px",
+              }}
+              height={{
+                base: "60px",
+                sm: "80px",
+                md: "100px",
+                lg: "120px",
+                "2xl": "150px",
+              }}
               borderRadius={"2px"}
             />
             <Heading>Anzone</Heading>
@@ -154,14 +196,23 @@ const Projects = () => {
           justifyContent={"space-between"}
           marginBottom={5}
         >
-          <Box color={"gray.500"} fontWeight={"bold"} fontSize={{ base: "16px", md: "20px"}}>
+          <Box
+            color={"gray.500"}
+            fontWeight={"bold"}
+            fontSize={{ base: "16px", md: "20px" }}
+          >
             Ongoing
           </Box>
-          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px"}} gap={2} align={"left"}>
+          <VStack
+            width={"70%"}
+            fontSize={{ base: "16px", md: "20px" }}
+            gap={2}
+            align={"left"}
+          >
             <Image
               src={ollama}
-              height={"50px"}
-              width={"50px"}
+              width={{ base: "40px", md: "50px", lg: "60px", "2xl": "100px" }}
+              height={{ base: "40px", md: "50px", lg: "60px", "2xl": "100px" }}
               borderRadius={"50%"}
             />
             <Heading>OllamaBot</Heading>
@@ -178,16 +229,15 @@ const Projects = () => {
               Github &#8599;
             </Link>
             <Text fontWeight={"bolder"} color={"gray.500"}>
-              &#x2022; Ollama &#x2022; Discord.js &#x2022; Express.js 
+              &#x2022; Ollama &#x2022; Discord.js &#x2022; Express.js
             </Text>
           </VStack>
         </Flex>
 
         {/* Portfolio Project */}
-        
       </Box>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

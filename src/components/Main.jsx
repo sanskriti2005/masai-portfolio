@@ -39,7 +39,7 @@ const Content = () => {
     },
   ];
   return (
-    <VStack width={"inherit"} height={'100%'} margin={"auto"}>
+    <VStack width={"inherit"} height={"100%"} margin={"auto"}>
       {/* Home and About Me Section*/}
       <Box width={"100%"} id="home">
         <Flex
@@ -50,8 +50,20 @@ const Content = () => {
         >
           <Image
             src={profile}
-            height={"120px"}
-            width={"120px"}
+            width={{
+              base: "100px",
+              sm: "120px",
+              md: "150px",
+              lg: "200px",
+              "2xl": "250px",
+            }}
+            height={{
+              base: "100px",
+              sm: "120px",
+              md: "150px",
+              lg: "200px",
+              "2xl": "250px",
+            }}
             borderRadius={"50%"}
           />
           <VStack align={"left"}>
@@ -63,17 +75,16 @@ const Content = () => {
         </Flex>
       </Box>
       {/* Skills infinite slider */}
-      <Box width={'100%'} align={'left'} padding={5}>
-      <Heading fontSize={15}>Skills</Heading>
-      <Skills/>
+      <Box width={"100%"} align={"left"} padding={5}>
+        <Heading fontSize={15}>Skills</Heading>
+        <Skills />
       </Box>
-      
 
       {/* About me section */}
       <Box width={"100%"} padding={5}>
         <VStack align={"left"}>
           <Heading fontSize={30}>About Me</Heading>
-          <Text fontSize={{ base: "16px", md: "20px"}}>
+          <Text fontSize={{ base: "16px", md: "20px" }}>
             Eager to learn and adapt to new frameworks, I thrive in
             collaborative environments and am committed to community engagement.
             My experience spans building responsive web applications,
@@ -85,9 +96,8 @@ const Content = () => {
 
       {/* Project section */}
       <Box id="projects">
-      <Projects />
+        <Projects />
       </Box>
-      
 
       {/* Experience Section */}
       <Box width={"100%"} padding={5} id="experience">
@@ -96,13 +106,10 @@ const Content = () => {
           {experience.map((item, index) => (
             <AccordionItem key={index} value={item.value}>
               <AccordionItemTrigger>
-                {item.title}{" "}
-                <Text color={"gray.500"} >
-                  {item.timeline}
-                </Text>
+                {item.title} <Text color={"gray.500"}>{item.timeline}</Text>
               </AccordionItemTrigger>
               <AccordionItemContent>
-                <Text fontSize={{ base: "16px", md: "20px"}}>{item.text}</Text>
+                <Text fontSize={{ base: "16px", md: "20px" }}>{item.text}</Text>
               </AccordionItemContent>
             </AccordionItem>
           ))}
