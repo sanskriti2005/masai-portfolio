@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/accordion";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import ContactForm from "./ContactForm";
 
 const Content = () => {
   const experience = [
@@ -39,7 +40,7 @@ const Content = () => {
     },
   ];
   return (
-    <VStack width={"inherit"} height={"100%"} margin={"auto"} >
+    <VStack width={"inherit"} height={"100%"} margin={"auto"}>
       {/* Home and About Me Section*/}
       <Box width={"100%"} id="home">
         <Flex
@@ -118,43 +119,46 @@ const Content = () => {
 
       {/* Contacts */}
 
-      <Box width={"100%"} padding={5} id="contact">
-        <VStack align={"left"}>
-          <Heading fontSize={30}>Contacts</Heading>
-          <Flex justifyContent={"space-between"} marginBottom={5}>
-            <Box color={"gray.500"}>GitHub</Box>
-            <Link
-              target={"blank"}
-              color={"gray.400"}
-              href="https://github.com/sanskriti2005"
-              _hover={{ textDecoration: "underline" }}
-            >
-              @sanskriti2005 &#8599;
-            </Link>
-          </Flex>
-          <Flex justifyContent={"space-between"} marginBottom={5}>
-            <Box color={"gray.500"}>Linkedin</Box>
-            <Link
-              target={"blank"}
-              color={"gray.400"}
-              href="https://www.linkedin.com/in/sanskriti-s/"
-              _hover={{ textDecoration: "underline" }}
-            >
-              Sanskriti S &#8599;
-            </Link>
-          </Flex>
-          <Flex justifyContent={"space-between"} marginBottom={5}>
-            <Box color={"gray.500"}>Email</Box>
-            <Link
-              target={"blank"}
-              color={"gray.400"}
-              href="mailto:sanskritisri27@gmail.com"
-              _hover={{ textDecoration: "underline" }}
-            >
-              sanskritisri27@gmail.com &#8599;
-            </Link>
-          </Flex>
-        </VStack>
+      <Box id="contact" width={"100%"} padding={5}>
+        <Heading fontSize={30} >Contacts</Heading>
+        <Flex justifyContent={"space-around"} align={'center'}>
+          <ContactForm />
+          <VStack align={"left"} width={"45%"}>
+            <Flex justifyContent={"space-between"} marginBottom={5}>
+              <Box color={"gray.500"}>GitHub</Box>
+              <Link
+                target={"blank"}
+                color={"gray.400"}
+                href="https://github.com/sanskriti2005"
+                _hover={{ textDecoration: "underline" }}
+              >
+                @sanskriti2005 &#8599;
+              </Link>
+            </Flex>
+            <Flex justifyContent={"space-between"} marginBottom={5}>
+              <Box color={"gray.500"}>Linkedin</Box>
+              <Link
+                target={"blank"}
+                color={"gray.400"}
+                href="https://www.linkedin.com/in/sanskriti-s/"
+                _hover={{ textDecoration: "underline" }}
+              >
+                Sanskriti S &#8599;
+              </Link>
+            </Flex>
+            <Flex justifyContent={"space-between"} marginBottom={5}>
+              <Box color={"gray.500"}>Email</Box>
+              <Link
+                target={"blank"}
+                color={"gray.400"}
+                href="mailto:sanskritisri27@gmail.com"
+                _hover={{ textDecoration: "underline" }}
+              >
+                sanskritisri27@gmail.com &#8599;
+              </Link>
+            </Flex>
+          </VStack>
+        </Flex>
       </Box>
     </VStack>
   );

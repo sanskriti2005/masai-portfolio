@@ -55,7 +55,7 @@ const Navbar = () => {
             gap={4}
             display={{
               base: "none",
-              sm: "none",
+              sm: "flex",
               md: "flex",
               lg: "flex",
               "2xl": "flex",
@@ -97,7 +97,7 @@ const Navbar = () => {
           <Box
             display={{
               base: "block",
-              sm: "block",
+              sm: "none",
               md: "none",
               lg: "none",
               "2xl": "none",
