@@ -18,9 +18,9 @@ const Navbar = () => {
 
   const handleResumeClick = () => {
     const viewLink =
-      "https://drive.google.com/file/d/1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P/view?usp=drive_link"; // Replace with your direct Drive link
+      "https://drive.google.com/file/d/1MIXpyVqoPpfLEx7ao5WnJqI4PBJBw0f8/view?usp=sharing"; 
     const downloadLink =
-      "https://drive.google.com/uc?export=download&id=1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P"; // Replace with your direct download link
+      "https://drive.google.com/uc?export=download&id=1MIXpyVqoPpfLEx7ao5WnJqI4PBJBw0f8";
 
     // Open resume in a new tab
     window.open(viewLink, "_blank");
@@ -28,7 +28,7 @@ const Navbar = () => {
     // Trigger download
     const a = document.createElement("a");
     a.href = downloadLink;
-    a.download = "Resume.pdf"; // Change filename if needed
+    a.download = "SanskritisResume.pdf"; 
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
