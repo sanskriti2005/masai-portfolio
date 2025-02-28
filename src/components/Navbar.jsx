@@ -39,7 +39,7 @@ const Navbar = () => {
         <Flex
           height={"100%"}
           width={"100%"}
-          bg="blackAlpha.800/40"
+          bg="blackAlpha.800/80"
           justify={"space-between"}
           alignItems={"center"}
           padding={3}

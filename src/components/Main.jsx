@@ -39,7 +39,7 @@ const Content = () => {
     },
   ];
   return (
-    <VStack width={"inherit"} height={"100%"} margin={"auto"}>
+    <VStack width={"inherit"} height={"100%"} margin={"auto"} >
       {/* Home and About Me Section*/}
       <Box width={"100%"} id="home">
         <Flex
