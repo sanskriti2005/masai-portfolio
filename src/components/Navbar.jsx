@@ -1,5 +1,12 @@
 import React from "react";
-import { Link, Flex, Box, Image, Button } from "@chakra-ui/react";
+import { Link, Flex, Box, Image, Button, VStack } from "@chakra-ui/react";
+import {
+  MenuContent,
+  MenuItem,
+  MenuRoot,
+  MenuTrigger,
+  MenuTriggerItem,
+} from "@/components/ui/menu";
 
 const Navbar = () => {
   const handleScroll = (id) => {
@@ -44,7 +51,16 @@ const Navbar = () => {
           alignItems={"center"}
           padding={3}
         >
-          <Flex gap={4}>
+          <Flex
+            gap={4}
+            display={{
+              base: "none",
+              sm: "none",
+              md: "flex",
+              lg: "flex",
+              "2xl": "flex",
+            }}
+          >
             <Button
               cursor="pointer"
               color="white"
@@ -78,6 +94,69 @@ const Navbar = () => {
               Contact
             </Button>
           </Flex>
+          <Box
+            display={{
+              base: "block",
+              sm: "block",
+              md: "none",
+              lg: "none",
+              "2xl": "none",
+            }}
+          >
+            <MenuRoot>
+              <MenuTrigger asChild>
+                <Button variant="outline" size="sm">
+                  <VStack gap={1}>
+                    <Box w="20px" h="2px" bg="white" />
+                    <Box w="20px" h="2px" bg="white" />
+                    <Box w="20px" h="2px" bg="white" />
+                  </VStack>
+                </Button>
+              </MenuTrigger>
+              <MenuContent>
+                <MenuItem value="home">
+                  <Button
+                    cursor="pointer"
+                    color="white"
+                    background={"none"}
+                    onClick={() => handleScroll("home")}
+                  >
+                    Home
+                  </Button>
+                </MenuItem>
+                <MenuItem value="projects">
+                  <Button
+                    cursor="pointer"
+                    color="white"
+                    background={"none"}
+                    onClick={() => handleScroll("projects")}
+                  >
+                    Projects
+                  </Button>
+                </MenuItem>
+                <MenuItem value="experience">
+                  <Button
+                    cursor="pointer"
+                    color="white"
+                    background={"none"}
+                    onClick={() => handleScroll("experience")}
+                  >
+                    Experience
+                  </Button>
+                </MenuItem>
+                <MenuItem value="contact">
+                  <Button
+                    cursor="pointer"
+                    color="white"
+                    background={"none"}
+                    onClick={() => handleScroll("contact")}
+                  >
+                    Contact
+                  </Button>
+                </MenuItem>
+              </MenuContent>
+            </MenuRoot>
+          </Box>
           <Box>
             <Button onClick={handleResumeClick}>Resume</Button>
           </Box>
