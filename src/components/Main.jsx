@@ -120,10 +120,29 @@ const Content = () => {
       {/* Contacts */}
 
       <Box id="contact" width={"100%"} padding={5}>
-        <Heading fontSize={30} >Contacts</Heading>
-        <Flex justifyContent={"space-around"} align={'center'}>
+        <Heading fontSize={30}>Contacts</Heading>
+        <Flex
+          justifyContent={"space-around"}
+          align={"center"}
+          flexDirection={{
+            base: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+            "2xl": "row",
+          }}
+        >
           <ContactForm />
-          <VStack align={"left"} width={"45%"}>
+          <VStack
+            align={"left"}
+            width={{
+              base: "90%",
+              sm: "90%",
+              md: "45%",
+              lg: "45%",
+              "2xl": "45%",
+            }}
+          >
             <Flex justifyContent={"space-between"} marginBottom={5}>
               <Box color={"gray.500"}>GitHub</Box>
               <Link

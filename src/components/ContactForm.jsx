@@ -1,4 +1,4 @@
-import { Button, Heading, Input, Textarea } from "@chakra-ui/react";
+import { Button, Heading, Input, Textarea, Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -23,7 +23,6 @@ const ContactForm = () => {
       if (res.status === 200) {
         setFormData(initFormData);
         setMsg("Email Sent!");
-        alert("Email Sent Successfully!");
       }
     } catch (error) {
       console.error("Error sending message:", error);
@@ -37,17 +36,26 @@ const ContactForm = () => {
   };
 
   return (
+    <Box
+      width={{
+        base: "90%",
+        sm: "90%",
+        md: "45%",
+        lg: "45%",
+        "2xl": "45%",
+      }}
+      padding="1rem"
+    >
       <form
         onSubmit={handleFormSubmit}
         style={{
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
-          padding: "1rem",
-          width:"45%"
+          width: "100%", 
         }}
       >
-        <Heading color={'gray.400'}>Reach out to me</Heading>
+        <Heading color={"gray.400"}>Reach out to me</Heading>
         {msg && <p>{msg}</p>}
         <Input
           type="email"
@@ -66,6 +74,7 @@ const ContactForm = () => {
         />
         <Button type="submit">Send</Button>
       </form>
+    </Box>
   );
 };
 
