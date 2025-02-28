@@ -27,10 +27,10 @@ const Projects = () => {
           justifyContent={"space-between"}
           marginBottom={5}
         >
-          <Box color={"gray.500"} fontWeight={"bold"}>
+          <Box color={"gray.500"} fontWeight={"bold"} fontSize={{ base: "16px", md: "20px"}}>
             Dec 2024
           </Box>
-          <VStack width={"70%"} fontSize={13} gap={2} align={"left"}>
+          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px" }} gap={2} align={"left"}>
             <Image
               src={evershade}
               height={100}
@@ -72,10 +72,10 @@ const Projects = () => {
           justifyContent={"space-between"}
           marginBottom={5}
         >
-          <Box color={"gray.500"} fontWeight={"bold"}>
+          <Box color={"gray.500"} fontWeight={"bold"} fontSize={{ base: "16px", md: "20px"}}>
             Sep 2024
           </Box>
-          <VStack width={"70%"} fontSize={13} gap={2} align={"left"}>
+          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px"}} gap={2} align={"left"}>
             <Image
               src={anzone}
               height={"50px"}
@@ -111,7 +111,7 @@ const Projects = () => {
         </Flex>
 
         {/* Bank Loan Case Study */}
-        <Flex
+        {/* <Flex
           className="project3"
           justifyContent={"space-between"}
           marginBottom={5}
@@ -119,7 +119,7 @@ const Projects = () => {
           <Box color={"gray.500"} fontWeight={"bold"}>
             Jan 2024
           </Box>
-          <VStack width={"70%"} fontSize={13} gap={2} align={"left"}>
+          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px", lg: "24px" }} gap={2} align={"left"}>
             <Heading>Bank Loan Case Study</Heading>
             <Text>
               This project aims understand a cohort of people who have
@@ -146,7 +146,7 @@ const Projects = () => {
               &#x2022; Pandas &#x2022; Numpy &#x2022; Matplotlib
             </Text>
           </VStack>
-        </Flex>
+        </Flex> */}
 
         {/* OllamaBot */}
         <Flex
@@ -154,10 +154,10 @@ const Projects = () => {
           justifyContent={"space-between"}
           marginBottom={5}
         >
-          <Box color={"gray.500"} fontWeight={"bold"}>
+          <Box color={"gray.500"} fontWeight={"bold"} fontSize={{ base: "16px", md: "20px"}}>
             Ongoing
           </Box>
-          <VStack width={"70%"} fontSize={13} gap={2} align={"left"}>
+          <VStack width={"70%"} fontSize={{ base: "16px", md: "20px"}} gap={2} align={"left"}>
             <Image
               src={ollama}
               height={"50px"}

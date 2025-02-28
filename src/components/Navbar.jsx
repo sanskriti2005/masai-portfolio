@@ -2,10 +2,19 @@ import React from "react";
 import { Link, Flex, Box, Image, Button } from "@chakra-ui/react";
 
 const Navbar = () => {
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   const handleResumeClick = () => {
-    const viewLink = "https://drive.google.com/file/d/1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P/view?usp=drive_link"; // Replace with your direct Drive link
-    const downloadLink = "https://drive.google.com/uc?export=download&id=1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P"; // Replace with your direct download link
-    
+    const viewLink =
+      "https://drive.google.com/file/d/1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P/view?usp=drive_link"; // Replace with your direct Drive link
+    const downloadLink =
+      "https://drive.google.com/uc?export=download&id=1N8ucU7KA9IRQoVUyIjb0NNsYNOuxjO4P"; // Replace with your direct download link
+
     // Open resume in a new tab
     window.open(viewLink, "_blank");
 
@@ -19,30 +28,55 @@ const Navbar = () => {
   };
   return (
     <div>
-      <Flex position={"fixed"} width={"100%"} height={"50px"} top={0} left={0}>
+      <Flex
+        zIndex={100}
+        position={"fixed"}
+        width={"100%"}
+        height={"50px"}
+        top={0}
+        left={0}
+      >
         <Flex
           height={"100%"}
           width={"100%"}
           bg="blackAlpha.800/40"
-          backdropFilter={"auto"}
-          backdropBlur={"10px"}
           justify={"space-between"}
           alignItems={"center"}
           padding={3}
         >
           <Flex gap={4}>
-            <Link href="#home" color={"white"}>
+            <Button
+              cursor="pointer"
+              color="white"
+              background={"none"}
+              onClick={() => handleScroll("home")}
+            >
               Home
-            </Link>
-            <Link href="#projects" color={"white"}>
+            </Button>
+            <Button
+              cursor="pointer"
+              color="white"
+              background={"none"}
+              onClick={() => handleScroll("projects")}
+            >
               Projects
-            </Link>
-            <Link href="#experience" color={"white"}>
+            </Button>
+            <Button
+              cursor="pointer"
+              color="white"
+              background={"none"}
+              onClick={() => handleScroll("experience")}
+            >
               Experience
-            </Link>
-            <Link href="#contact" color={"white"}>
+            </Button>
+            <Button
+              cursor="pointer"
+              color="white"
+              background={"none"}
+              onClick={() => handleScroll("contact")}
+            >
               Contact
-            </Link>
+            </Button>
           </Flex>
           <Box>
             <Button onClick={handleResumeClick}>Resume</Button>

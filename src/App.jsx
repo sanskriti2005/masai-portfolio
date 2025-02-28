@@ -10,12 +10,12 @@ const flicker = defineKeyframes`
 const App = () => {
   const flickerAnimation = `${flicker} 20s infinite linear`;
   return (
-    <Container>
+    <Container className="dark" fluid>
       <Container fluid width={800}>
         <Navbar />
       </Container>
 
-      <Container className="dark" width={400} fluid margin={"100px auto"}>
+      <Container width={{ "2xl": 700 }} fluid margin={"100px auto"}>
         <Content />
       </Container>
     </Container>

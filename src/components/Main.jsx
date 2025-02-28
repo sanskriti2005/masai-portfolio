@@ -39,7 +39,7 @@ const Content = () => {
     },
   ];
   return (
-    <VStack width={"inherit"} height={'100%'} margin={"auto"} >
+    <VStack width={"inherit"} height={'100%'} margin={"auto"}>
       {/* Home and About Me Section*/}
       <Box width={"100%"} id="home">
         <Flex
@@ -73,7 +73,7 @@ const Content = () => {
       <Box width={"100%"} padding={5}>
         <VStack align={"left"}>
           <Heading fontSize={30}>About Me</Heading>
-          <Text fontSize={13}>
+          <Text fontSize={{ base: "16px", md: "20px"}}>
             Eager to learn and adapt to new frameworks, I thrive in
             collaborative environments and am committed to community engagement.
             My experience spans building responsive web applications,
@@ -97,12 +97,12 @@ const Content = () => {
             <AccordionItem key={index} value={item.value}>
               <AccordionItemTrigger>
                 {item.title}{" "}
-                <Text color={"gray.500"} fontSize={10}>
+                <Text color={"gray.500"} >
                   {item.timeline}
                 </Text>
               </AccordionItemTrigger>
               <AccordionItemContent>
-                <Text>{item.text}</Text>
+                <Text fontSize={{ base: "16px", md: "20px"}}>{item.text}</Text>
               </AccordionItemContent>
             </AccordionItem>
           ))}
