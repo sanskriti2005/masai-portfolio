@@ -19,7 +19,7 @@ const App = () => {
           <Container fluid width={800}>
             <Navbar />
           </Container>
-          <Container width={{ "2xl": 700 }} fluid margin={"auto"} padding={'100px 0'}>
+          <Container width={{ "2xl": 700 }} fluid margin={"auto"} padding={'60px 0'}>
             <Content />
           </Container>
         </Container>

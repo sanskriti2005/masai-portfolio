@@ -75,11 +75,6 @@ const Content = () => {
           </VStack>
         </Flex>
       </Box>
-      {/* Skills infinite slider */}
-      <Box width={"100%"} align={"left"} padding={5}>
-        <Heading fontSize={15}>Skills</Heading>
-        <Skills />
-      </Box>
 
       {/* About me section */}
       <Box width={"100%"} padding={5}>
@@ -93,6 +88,12 @@ const Content = () => {
             reflecting a dedication to continuous growth and impactful teamwork.
           </Text>
         </VStack>
+      </Box>
+
+      {/* Skills infinite slider */}
+      <Box width={"100%"} align={"left"} padding={5}>
+        <Heading fontSize={15}>Skills</Heading>
+        <Skills />
       </Box>
 
       {/* Project section */}
