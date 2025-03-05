@@ -103,7 +103,7 @@ const Content = () => {
       {/* Experience Section */}
       <Box width={"100%"} padding={5} id="experience">
         <Heading fontSize={30}>Experience</Heading>
-        <AccordionRoot collapsible defaultValue={["devrhylme"]}>
+        <AccordionRoot multiple defaultValue={["devrhylme"]}>
           {experience.map((item, index) => (
             <AccordionItem key={index} value={item.value}>
               <AccordionItemTrigger>
